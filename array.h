@@ -1,0 +1,1 @@
+double media(double *arr, size_t n);
