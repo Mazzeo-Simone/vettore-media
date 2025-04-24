@@ -1,9 +1,17 @@
 #include<stddef.h>
 
-double media(double *arr, size_t n){
-	double media = 0;
-	for(size_t i=0; i<n; i++)
-		media+=arr[i];
+void array_remove(double *arr, size_t *pn, size_t pos){
+	/* se la pos è fuori dalla dimensione, non fare nulla */
+	if(pos>=*pn)
+		return;
 
-	return media/n;
-}
+	/* se c'è un solo elemento, fare nulla */
+	if(*pn==1)
+		return;
+
+
+	for(int i=pos; i<*pn; i++)
+		arr[i] = arr[i+1];
+
+	*pn = *pn - 1; //decremento la dimensione
+

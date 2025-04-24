@@ -1,17 +1,10 @@
-#include<stdio.h>
-#include"array.h"
-
-#define N 5
+include<stdio.h>
+#include"contaspazi.h"
 
 int main(void){
-	double arr[N] = {2.3, 4.7, 5.9, 8.2, 3.7};
-	size_t n = sizeof(arr)/sizeof(double);
-	double m = media(arr, n);
-	for(int i=0; i<N; i++)
-		printf("%.2lf\t", arr[i]);
-	printf("\n");	
-	printf("\n");	
-	
-	printf("la media e': %.2lf\n", m);
+	char *test = "Ciao mamma questa è una prova per contare gli spazi  ";
+	size_t n_spazi = conta_spazi(test);
+	printf("%s\n", test);
+	printf("Spazi n: %ld\n", n_spazi);
 	return 0;
 }

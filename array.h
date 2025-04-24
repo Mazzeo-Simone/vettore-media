@@ -1,1 +1,1 @@
-double media(double *arr, size_t n);
+void array_remove(double *arr, size_t *pn, size_t pos);
